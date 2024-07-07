@@ -1,6 +1,6 @@
 class WeatherModel {
   final String cityName;
-  final DateTime dateTime;
+  final String dateTime;
   final double temp;
   final double maxTemp;
   final double minTemp;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wethar_app/cubits/get_weather_cubit/get_weather_cubit.dart';
-import 'package:wethar_app/models/weather_model.dart';
 import 'package:wethar_app/services/weather_service.dart';
 import 'package:wethar_app/views/home_view.dart';
 

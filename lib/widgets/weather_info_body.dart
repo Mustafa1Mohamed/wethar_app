@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wethar_app/main.dart';
 import 'package:wethar_app/models/weather_model.dart';
 import 'package:wethar_app/services/weather_service.dart';
 

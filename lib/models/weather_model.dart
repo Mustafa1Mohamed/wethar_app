@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class WeatherModel {
   final String cityName;
   final String dateTime;
@@ -6,7 +8,6 @@ class WeatherModel {
   final double minTemp;
   final String image;
   final String weatherCondition;
-
   WeatherModel(
       {required this.cityName,
       required this.dateTime,

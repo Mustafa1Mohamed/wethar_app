@@ -10,16 +10,15 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(
+            Icons.arrow_back,
+          ),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
           'Search a City',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(),
         ),
-        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),

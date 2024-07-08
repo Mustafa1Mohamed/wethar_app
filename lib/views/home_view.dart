@@ -20,9 +20,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: AppBar(
         title: const Text(
           'Weather App',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(),
         ),
         actions: [
           IconButton(
@@ -33,11 +31,9 @@ class _HomeViewState extends State<HomeView> {
             },
             icon: const Icon(
               Icons.search,
-              color: Colors.white,
             ),
           ),
         ],
-        backgroundColor: Colors.blue,
       ),
       body: BlocBuilder<GetWeatherCubit, WeatherState>(
         builder: (context, state) {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wethar_app/cubits/get_weather_cubit/get_weather_cubit.dart';
+import 'package:wethar_app/models/weather_model.dart';
+import 'package:wethar_app/services/weather_service.dart';
 import 'package:wethar_app/views/home_view.dart';
 
 void main() {
@@ -14,9 +16,15 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => GetWeatherCubit(),
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomeView(),
+      child: Builder(
+        builder: (context) => MaterialApp(
+          theme: ThemeData(
+            primarySwatch: getThemeColor(),
+            useMaterial3: false,
+          ),
+          debugShowCheckedModeBanner: false,
+          home: const HomeView(),
+        ),
       ),
     );
   }

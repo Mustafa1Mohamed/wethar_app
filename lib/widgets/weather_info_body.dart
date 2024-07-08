@@ -18,9 +18,9 @@ class WeatherInfoBody extends StatelessWidget {
               fontSize: 32,
             ),
           ),
-          const Text(
-            'updated at 23:46',
-            style: TextStyle(
+          Text(
+            'updated at ${convertDateFromStringToDate(weatherModel.dateTime).hour}:${convertDateFromStringToDate(weatherModel.dateTime).minute}',
+            style: const TextStyle(
               fontSize: 24,
             ),
           ),
@@ -76,4 +76,8 @@ class WeatherInfoBody extends StatelessWidget {
       ),
     );
   }
+}
+
+DateTime convertDateFromStringToDate(String value) {
+  return DateTime.parse(value);
 }

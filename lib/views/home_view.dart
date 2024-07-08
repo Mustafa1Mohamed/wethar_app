@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wethar_app/views/search_view.dart';
-import 'package:wethar_app/widgets/no_wethar_body.dart';
 import 'package:wethar_app/widgets/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {

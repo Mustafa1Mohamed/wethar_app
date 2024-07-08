@@ -1,9 +1,8 @@
 
 
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
-import 'package:wethar_app/models/weather_model.dart';
-import 'package:wethar_app/services/weather_service.dart';
+
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -29,8 +28,7 @@ class SearchView extends StatelessWidget {
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
-              WeatherModel weatherModel = await WeatherService(Dio())
-                  .getWeatherService(cityName: value);
+              
               Navigator.pop(context);
             },
             decoration: InputDecoration(

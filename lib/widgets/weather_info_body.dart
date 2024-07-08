@@ -13,7 +13,7 @@ class WeatherInfoBody extends StatelessWidget {
         children: [
           Text(
             weatherModel.cityName,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 32,
             ),
@@ -30,27 +30,31 @@ class WeatherInfoBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                'assets/images/clear.png',
-              ),
-              const Text(
-                '17',
-                style: TextStyle(
+              weatherModel.image.contains("https:")
+                  ? Image.network(
+                      weatherModel.image,
+                    )
+                  : Image.network(
+                      "https:${weatherModel.image}",
+                    ),
+              Text(
+                weatherModel.temp.toString(),
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 32,
                 ),
               ),
-              const Column(
+              Column(
                 children: [
                   Text(
-                    'Maxtemp: 24',
-                    style: TextStyle(
+                    'Maxtemp: ${weatherModel.maxTemp}',
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
                   Text(
-                    'Mintemp: 16',
-                    style: TextStyle(
+                    'Mintemp: ${weatherModel.minTemp}',
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
@@ -61,9 +65,9 @@ class WeatherInfoBody extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          const Text(
-            'Ligh Rain',
-            style: TextStyle(
+          Text(
+            weatherModel.weatherCondition,
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 32,
             ),

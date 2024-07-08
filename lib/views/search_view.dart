@@ -1,4 +1,4 @@
-import 'dart:developer';
+
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ class SearchView extends StatelessWidget {
             onSubmitted: (value) async {
               WeatherModel weatherModel = await WeatherService(Dio())
                   .getWeatherService(cityName: value);
-              log(weatherModel.image);
+              Navigator.pop(context);
             },
             decoration: InputDecoration(
               labelText: 'Search',

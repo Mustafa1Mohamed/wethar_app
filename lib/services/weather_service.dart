@@ -34,7 +34,7 @@ MaterialColor getThemeColor() {
   if (weatherCondition == 'Sunny' ||
       weatherCondition == 'Clear' ||
       weatherCondition == 'partly cloudy') {
-    return Colors.orange;
+    return Colors.blue;
   } else if (weatherCondition == 'Blizzard' ||
       weatherCondition == 'Patchy snow possible' ||
       weatherCondition == 'Patchy sleet possible' ||

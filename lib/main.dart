@@ -8,23 +8,38 @@ void main() {
   runApp(const WeatherApp());
 }
 
-class WeatherApp extends StatelessWidget {
+class WeatherApp extends StatefulWidget {
   const WeatherApp({super.key});
 
+  @override
+  State<WeatherApp> createState() => _WeatherAppState();
+}
+
+class _WeatherAppState extends State<WeatherApp> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => GetWeatherCubit(),
       child: Builder(
         builder: (context) => MaterialApp(
-          theme: ThemeData(
-            primarySwatch: getThemeColor(),
-            useMaterial3: false,
-          ),
+          theme: ThemDataa(),
           debugShowCheckedModeBanner: false,
           home: const HomeView(),
         ),
       ),
+    );
+  }
+
+  @override
+  void setState(VoidCallback fn) {
+    ThemDataa();
+    super.setState(fn);
+  }
+
+  ThemeData ThemDataa() {
+    return ThemeData(
+      primarySwatch: getThemeColor(),
+      useMaterial3: false,
     );
   }
 }
